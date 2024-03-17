@@ -1,5 +1,5 @@
 metadata {
-    definition (name: "Hikvision Door Controll", namespace: "hikvision-door-controll", author: "vctgomes") {
+    definition (name: "Hikvision Door Controll", namespace: "vctgomes", author: "vctgomes") {
         capability "Lock"
     }
 }
@@ -11,12 +11,12 @@ preferences {
 
 def installed() {
     log.debug "Installed"
-    setLockState("closed")
+    setLockState("locked")
 }
 
 def updated() {
     log.debug "Updated"
-    setLockState("closed")
+    setLockState("locked")
 }
 
 def unlock() {
@@ -24,7 +24,7 @@ def unlock() {
 }
 
 def lock() {
-    sendCommand("close")
+    sendCommand("open")
 }
 
 def sendCommand(String cmd) {
@@ -41,7 +41,7 @@ def sendCommand(String cmd) {
 
     try {
         httpPut(params) { response ->
-            log.debug "Resposta do servidor: ${response.status}"
+            log.debug "Server response: ${response.status}"
             if (response.status == 200) {
                 log.debug "Command sent"
             } else {
