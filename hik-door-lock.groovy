@@ -10,6 +10,7 @@ preferences {
 }
 
 def installed() {
+    log.debug "Installed"
     setLockState("closed")
 }
 
