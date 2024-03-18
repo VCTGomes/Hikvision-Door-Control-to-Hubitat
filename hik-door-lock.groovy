@@ -1,5 +1,5 @@
 metadata {
-    definition (name: "Hikvision Door Controll", namespace: "vctgomes", author: "vctgomes") {
+    definition (name: "Hikvision Door Control", namespace: "vctgomes", author: "vctgomes") {
         capability "Lock"
     }
 }
