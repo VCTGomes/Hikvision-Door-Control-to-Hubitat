@@ -1,5 +1,5 @@
 metadata {
-    definition (name: "Hikvision Door Control", namespace: "vctgomes", author: "vctgomes", importUrl "https://raw.githubusercontent.com/VCTGomes/Hikvision-Door-Control-to-Hubitat/main/hik-door-lock.groovy") {
+    definition (name: "Hikvision Door Control", namespace: "vctgomes", author: "vctgomes") {
         capability "Lock"
     }
 }
