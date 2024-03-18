@@ -6,7 +6,7 @@ Unfortunately, it's not possible to lock, so the lock and unlock buttons will al
 
 ### Install the driver.
 1. On Hubitat, navigate to "Driver code," then click the "+ New Driver" button.
-1. Click the "Import" button and use the following raw URL to download the code: https://raw.githubusercontent.com/VCTGomes/Hikvision-Door-Controll-to-Hubitat/main/hik-door-lock.groovy
+1. Click the "Import" button and use the following raw URL to download the code: https://raw.githubusercontent.com/VCTGomes/Hikvision-Door-Control-to-Hubitat/main/hik-door-lock.groovy
 1. Save it, and the driver is ready to use!
 
 ### Set up the locker
