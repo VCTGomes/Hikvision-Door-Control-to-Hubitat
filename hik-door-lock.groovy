@@ -11,20 +11,22 @@ preferences {
 
 def installed() {
     log.debug "Installed"
-    setLockState("locked")
+    sendEvent(name: 'lock', value: 'locked')
 }
 
 def updated() {
     log.debug "Updated"
-    setLockState("locked")
+    sendEvent(name: 'lock', value: 'locked')
 }
 
 def unlock() {
     sendCommand("open")
+    sendEvent(name: 'lock', value: 'unlocked')
+    runIn(10, "lock")
 }
 
 def lock() {
-    sendCommand("open")
+    sendEvent(name: 'lock', value: 'locked')
 }
 
 def sendCommand(String cmd) {
